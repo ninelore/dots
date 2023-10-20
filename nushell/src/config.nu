@@ -103,9 +103,9 @@ $env.config = {
         always_trash: false # always act as if -t was given. Can be overridden with -p
     }
 
-    cd: {
-        abbreviations: false # allows `cd s/o/f` to expand to `cd some/other/folder`
-    }
+    # cd: {
+    #     abbreviations: false # allows `cd s/o/f` to expand to `cd some/other/folder`
+    # }
 
     table: {
         mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
@@ -735,3 +735,10 @@ alias cryptclose = sudo cryptsetup close
 alias py = python3
 alias cdo = cd $env.OLDPWD
 alias grep = grep --color=auto
+
+## Arch
+alias y = paru --bottomup
+alias yay = paru --bottomup
+alias apt = paru --bottomup
+alias cleanup = sudo pacman -Rns (pacman -Qtdq)
+alias upall = yay -Syu --noconfirm
