@@ -740,5 +740,5 @@ alias grep = grep --color=auto
 alias y = paru --bottomup
 alias yay = paru --bottomup
 alias apt = paru --bottomup
-alias cleanup = sudo pacman -Rns (pacman -Qtdq)
+alias cleanup = sudo bash -c 'pacman -Rns $(pacman -Qtdq)' #TODO
 alias upall = yay -Syu --noconfirm
