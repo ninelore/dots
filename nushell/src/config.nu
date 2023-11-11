@@ -85,6 +85,89 @@ let dark_theme = {
     cursor: "#ffffff"
 }
 
+let nightlion1 = {
+    separator: "#bbbbbb"
+    leading_trailing_space_bg: { attr: "n" }
+    header: { fg: "#5fde8f" attr: "b" }
+    empty: "#276bd8"
+    bool: {|| if $in { "#55ffff" } else { "light_gray" } }
+    int: "#bbbbbb"
+    filesize: {|e|
+        if $e == 0b {
+            "#bbbbbb"
+        } else if $e < 1mb {
+            "#00dadf"
+        } else {{ fg: "#276bd8" }}
+    }
+    duration: "#bbbbbb"
+    date: {|| (date now) - $in |
+        if $in < 1hr {
+            { fg: "#bb0000" attr: "b" }
+        } else if $in < 6hr {
+            "#bb0000"
+        } else if $in < 1day {
+            "#f3f167"
+        } else if $in < 3day {
+            "#5fde8f"
+        } else if $in < 1wk {
+            { fg: "#5fde8f" attr: "b" }
+        } else if $in < 6wk {
+            "#00dadf"
+        } else if $in < 52wk {
+            "#276bd8"
+        } else { "dark_gray" }
+    }
+    range: "#bbbbbb"
+    float: "#bbbbbb"
+    string: "#bbbbbb"
+    nothing: "#bbbbbb"
+    binary: "#bbbbbb"
+    cellpath: "#bbbbbb"
+    row_index: { fg: "#5fde8f" attr: "b" }
+    record: "#bbbbbb"
+    list: "#bbbbbb"
+    block: "#bbbbbb"
+    hints: "dark_gray"
+    search_result: { fg: "#bb0000" bg: "#bbbbbb" }
+
+    shape_and: { fg: "#bb00bb" attr: "b" }
+    shape_binary: { fg: "#bb00bb" attr: "b" }
+    shape_block: { fg: "#276bd8" attr: "b" }
+    shape_bool: "#55ffff"
+    shape_custom: "#5fde8f"
+    shape_datetime: { fg: "#00dadf" attr: "b" }
+    shape_directory: "#00dadf"
+    shape_external: "#00dadf"
+    shape_externalarg: { fg: "#5fde8f" attr: "b" }
+    shape_filepath: "#00dadf"
+    shape_flag: { fg: "#276bd8" attr: "b" }
+    shape_float: { fg: "#bb00bb" attr: "b" }
+    shape_garbage: { fg: "#FFFFFF" bg: "#FF0000" attr: "b" }
+    shape_globpattern: { fg: "#00dadf" attr: "b" }
+    shape_int: { fg: "#bb00bb" attr: "b" }
+    shape_internalcall: { fg: "#00dadf" attr: "b" }
+    shape_list: { fg: "#00dadf" attr: "b" }
+    shape_literal: "#276bd8"
+    shape_match_pattern: "#5fde8f"
+    shape_matching_brackets: { attr: "u" }
+    shape_nothing: "#55ffff"
+    shape_operator: "#f3f167"
+    shape_or: { fg: "#bb00bb" attr: "b" }
+    shape_pipe: { fg: "#bb00bb" attr: "b" }
+    shape_range: { fg: "#f3f167" attr: "b" }
+    shape_record: { fg: "#00dadf" attr: "b" }
+    shape_redirection: { fg: "#bb00bb" attr: "b" }
+    shape_signature: { fg: "#5fde8f" attr: "b" }
+    shape_string: "#5fde8f"
+    shape_string_interpolation: { fg: "#00dadf" attr: "b" }
+    shape_table: { fg: "#276bd8" attr: "b" }
+    shape_variable: "#bb00bb"
+
+    background: "#000000"
+    foreground: "#bbbbbb"
+    cursor: "#bbbbbb"
+}
+
 # External completer example
 # let carapace_completer = {|spans|
 #     carapace $spans.0 nushell $spans | from json
@@ -92,6 +175,8 @@ let dark_theme = {
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
+    color_config: $nightlion1
+
     show_banner: false # true or false to enable or disable the welcome banner at startup
 
     ls: {
@@ -182,7 +267,7 @@ $env.config = {
         vi_normal: underscore # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (underscore is the default)
     }
 
-    color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
+     # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
     use_grid_icons: true
     footer_mode: "25" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
@@ -740,5 +825,5 @@ alias grep = grep --color=auto
 alias y = paru --bottomup
 alias yay = paru --bottomup
 alias apt = paru --bottomup
-alias cleanup = sudo bash -c 'pacman -Rns $(pacman -Qtdq)' #TODO
+alias cleanup = sudo bash -c 'pacman -Rns {pacman -Qtdq}' #TODO
 alias upall = yay -Syu --noconfirm
