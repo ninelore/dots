@@ -821,15 +821,11 @@ alias py = python3
 alias cdo = cd $env.OLDPWD
 alias grep = grep --color=auto
 
-## Arch
-if ((sys | get host | get name) == "Arch Linux") {
-    alias y = paru --bottomup
-    alias yay = paru --bottomup
-    alias apt = paru --bottomup
-    alias cleanup = sudo bash -c 'pacman -Rns {pacman -Qtdq}' #TODO
-    alias upall = yay -Syu --noconfirm
-}
+# TODO: conditional?
+alias y = paru --bottomup
+alias yay = paru --bottomup
+alias apt = paru --bottomup
+alias cleanup = sudo bash -c 'pacman -Rns {pacman -Qtdq}' #TODO
+alias upall = yay -Syu --noconfirm
 
-if ((sys | get host | get name) == "Windows") {
-    alias docker = podman
-}
+#alias docker = podman
