@@ -822,10 +822,7 @@ alias cdo = cd $env.OLDPWD
 alias grep = grep --color=auto
 
 # TODO: conditional?
-alias y = paru --bottomup
-alias yay = paru --bottomup
-alias apt = paru --bottomup
-alias cleanup = sudo bash -c 'pacman -Rns {pacman -Qtdq}' #TODO
+alias y = yay
 alias upall = yay -Syu --noconfirm
 
 #alias docker = podman
