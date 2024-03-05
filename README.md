@@ -1,11 +1,11 @@
-<h1 align="center">ninelore's cross-platform dotfiles</h1>
+<h1 align="center">ninelore's new dotfile repo</h1>
 
 ## What dis?
 
-I use Windows and Linux equally, so here are my configs for cross-platform Tools
+I use Windows and Linux equally, so here are my configs for both.
 
 ## What do I need?
 
-Requires a Nerd Font and Oh-My-Posh
+Nushell configs require a Nerd Font and Oh-My-Posh
 
-...so far
+tbd
