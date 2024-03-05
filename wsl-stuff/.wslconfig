@@ -1,0 +1,7 @@
+[wsl2]
+swap=0
+kernel=C:\\Users\\ninel\\wsl_bzImage
+memory=16GB
+
+[experimental]
+autoMemoryReclaim=dropcache
