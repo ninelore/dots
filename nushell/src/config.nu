@@ -822,7 +822,7 @@ alias grep = grep --color=auto
 
 # TODO: conditional?
 alias y = yay
-alias cleanup = sudo pacman -Rcs ...(pacman -Qqtq | lines)
+alias cleanup = sudo pacman -Rcs ...(pacman -Qdtq | lines)
 alias rmdbgpkg = sudo pacman -Rcs ...(pacman -Qqs \-debug | lines)
 
 
