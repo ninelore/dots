@@ -805,13 +805,12 @@ $env.config = {
 source ~/.oh-my-posh.nu
 
 # Aliases
-
+alias fucking = sudo
 alias v = nvim
 alias untar = tar -xavf
 alias l. = ls -d .*
 alias sv = sudo nvim
 alias root = sudo -i
-alias su = sudo -i
 alias r = ranger
 alias sr = sudo ranger
 alias c = clear
@@ -823,6 +822,8 @@ alias grep = grep --color=auto
 
 # TODO: conditional?
 alias y = yay
-alias upall = yay -Syu --noconfirm
+alias cleanup = sudo pacman -Rcs ...(pacman -Qqtq | lines)
+alias rmdbgpkg = sudo pacman -Rcs ...(pacman -Qqs \-debug | lines)
+
 
 #alias docker = podman
