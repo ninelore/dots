@@ -1,0 +1,3 @@
+[submodule "olddots"]
+	path = olddots
+	url = https://github.com/ninelore/dotfiles
