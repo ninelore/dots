@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for i in "gtk-3.0" "gtk-4.0" "hypr" "kitty" "Kvantum" "waybar"; do
+for i in "hypr" "kitty" "waybar"; do
     if [[ -d "./$i" ]]; then 
         cp -rf "./$i" ~/.config/ 
     else 

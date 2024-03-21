@@ -2,7 +2,7 @@ adw-gtk3
 adwaita-qt-git
 breeze-icons
 chili-sddm-theme
-copyq
+cliphist
 dolphin
 git
 gnome-keyring
@@ -22,6 +22,7 @@ networkmanager
 noto-fonts
 noto-fonts-emoji
 nushell
+nwg-look
 oh-my-posh-bin
 otf-overpass
 otf-overpass-nerd
