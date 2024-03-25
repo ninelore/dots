@@ -12,3 +12,9 @@
 Nushell configs require a Nerd Font and Oh-My-Posh
 
 For my Linux Desktop setup refer to `linux-wm/packagelist-linux-wm.txt`
+
+## TODO
+
+- Mako config
+- XF86 Keybinds
+- Update packagelist
