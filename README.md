@@ -15,6 +15,4 @@ For my Linux Desktop setup refer to `linux-wm/packagelist-linux-wm.txt`
 
 ## TODO
 
-- Mako config
 - XF86 Keybinds
-- Update packagelist
