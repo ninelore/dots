@@ -18,3 +18,5 @@ For my Linux Desktop setup refer to `linux-wm/packagelist-linux-wm.txt`
 - Redo Waybar CSS and Icons
 - install.sh improvements
 - XF86 Keybinds
+- maybe some /etc backups
+- wofi styling
