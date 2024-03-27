@@ -42,6 +42,7 @@ qt5-wayland
 qt6-wayland
 qt6ct
 ranger
+swww
 ttf-dejavu
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
@@ -56,4 +57,5 @@ wofi
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-utils
+xorg-xwayland-hidpi-xprop
 yay
