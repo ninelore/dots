@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-_WM=("hypr" "kitty" "waybar" "xdg-desktop-portal" "mako")
+_WM=("hypr" "kitty" "mako" "waybar" "xdg-desktop-portal")
 _CLI=("ranger")
 
 if [[ $1 == "wm" ]]; then
+    echo "install wm"
     for i in "${_WM[@]}"; do
         if [[ -d "./linux-wm/$i" ]]; then
             cp -rf "./linux-wm/$i" ~/.config/
@@ -15,6 +16,7 @@ if [[ $1 == "wm" ]]; then
     done
 fi
 
+echo "install cli"
 for i in "${_CLI[@]}"; do
     if [[ -d "./linux-cli/$i" ]]; then 
         cp -rf "./linux-cli/$i" ~/.config/ 
