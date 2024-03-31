@@ -1,6 +1,6 @@
-font=OverpassNerdFont-Regular 12
+font=OverpassNerdFont-Regular 11
 border-radius=7
 background-color=#151515DD
 border-color=#FAFAFADD
-text-alignment=center
-anchor=top-center
+height=400
+width=550
