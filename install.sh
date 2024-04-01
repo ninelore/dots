@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-_WM=("hypr" "kitty" "mako" "waybar" "xdg-desktop-portal")
+_WM=("anyrun" "hypr" "kitty" "mako" "waybar" "xdg-desktop-portal")
 _CLI=("ranger")
 
 if [[ $1 == "wm" ]]; then
