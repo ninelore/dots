@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-op=$(echo -e " Poweroff\n Reboot\n Suspend\n Lock\n Logout" | wofi -i --dmenu | awk '{print tolower($2)}')
+op=$(echo -e " Poweroff\n Reboot\n Suspend\n Lock\n Logout" | anyrun --hide-icons true --hide-plugin-info true --show-results-immediately true --plugins libstdin.so | awk '{print tolower($2)}')
 
 case $op in
 poweroff) ;&
