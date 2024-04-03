@@ -17,4 +17,5 @@ For my Linux Desktop setup refer to `linux-wm/packagelist-linux-wm.txt`
 
 - install.sh improvements
 - XF86 Keybinds
+- split packagelist into cli and wm
 - maybe some /etc backups
