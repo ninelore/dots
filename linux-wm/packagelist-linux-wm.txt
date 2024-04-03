@@ -25,12 +25,11 @@ nautilus
 neovim
 networkmanager
 noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 nushell
 nwg-look
 oh-my-posh-bin
-otf-overpass
-otf-overpass-nerd
 pacman-contrib
 pavucontrol
 pipewire
@@ -43,11 +42,8 @@ qt6-wayland
 qt6ct
 ranger
 swww
-ttf-dejavu
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
-ttf-liberation
-ttf-overpass
 ueberzug
 vim
 w3m
