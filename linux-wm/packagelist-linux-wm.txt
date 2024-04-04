@@ -36,6 +36,8 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+polkit
+polkit-gnome
 power-profiles-daemon
 qt5-wayland
 qt6-wayland
