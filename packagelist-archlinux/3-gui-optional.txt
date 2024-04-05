@@ -1,0 +1,9 @@
+evince
+gimp
+gnome-calculator
+gnome-connections
+loupe
+microsoft-edge-stable-bin
+openrazer-daemon
+thunderbird
+totem

@@ -5,6 +5,7 @@
 - cross-cli: Configs relevant for CLI tools for all operating systems
 - linux-cli: Configs relevant for CLI tools for linux and WSL
 - linux-wm: Configs relevant for my Linux Desktop Setup
+- packagelist-archlinux: List of Arch linux packages
 - wsl: self-explainatory: WSL-specific stuff
 
 ## What do I need?

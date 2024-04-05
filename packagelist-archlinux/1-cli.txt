@@ -1,0 +1,17 @@
+git
+github-cli
+htop
+less
+neovim
+nodejs-lts-iron
+npm
+ncdu
+nushell
+oh-my-posh-bin
+pacman-contrib
+ranger
+rustup
+ueberzug
+unarchiver
+w3m
+yay
