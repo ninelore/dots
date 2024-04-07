@@ -1,5 +1,4 @@
 adw-gtk3
-adwaita-qt6-git
 anyrun-git
 chili-sddm-theme
 cliphist
