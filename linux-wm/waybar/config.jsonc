@@ -6,17 +6,16 @@
     ],
     "modules-center": [
         "clock",
-        "custom/player",
+        //"custom/player",
         "idle_inhibitor"
     ],
     "modules-right": [
         "tray",
         "temperature",
-        "network",
         "backlight",
         "pulseaudio",
-        // "keyboard-state",
-        "battery"
+        "battery",
+        "network"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -51,15 +50,13 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "": 0,
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": [
+            "",
             "",
-            "",
-            ""
+            ""
         ]
     },
     "backlight": {
@@ -95,18 +92,17 @@
         ]
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
-        "tooltip-format": "{ifname} via {gwaddr} 󰱓",
-        "format-linked": "{ifname} (No IP) 󰅛",
-        "format-disconnected": "Disconnected 󰲛",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "tooltip-format": "{signalStrength}% {essid}\n{ifname}: {ipaddr}/{cidr}\nvia {gwaddr}",
+        "format-linked": "!󰅛!",
+        "format-disconnected": "󰲛"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon} ",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "Muted {icon} {format_source}",
-        "format-muted": "Muted {icon} ",
+        "format-muted": "Muted {icon}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -119,7 +115,8 @@
             "default": [
                 "",
                 "",
-                ""
+                "",
+                ""
             ]
         },
         "on-click": "pavucontrol"
