@@ -1,37 +1,29 @@
 {
     "layer": "top",
-    "spacing": 4, // Gaps between modules (4px)
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
+    "spacing": 16,
+    "modules-left": [],
     "modules-center": [
         "clock",
-        //"custom/player",
-        "idle_inhibitor"
+        "hyprland/workspaces",
+        "wireplumber",
+        "temperature"
     ],
     "modules-right": [
         "tray",
-        "temperature",
         "backlight",
-        "pulseaudio",
         "battery",
+        "power-profiles-daemon",
+        "idle_inhibitor",
+        "bluetooth",
         "network"
     ],
-    // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": false,
-        //"all-outputs": true,
         "on-click": "activate",
         "format": "{name}"
     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
+    "hyprland/window": {
+        "format": "{class}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -41,27 +33,29 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+        "spacing": 14
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "temperature": {
-        "": 0,
         "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
+        "tooltip-format": "{temperatureC}°C",
         "format-icons": [
             "",
+            "",
+            "",
+            "",
+            "",
             "",
             ""
         ]
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon}",
+        "tooltip-format": "{percent}%",
         "format-icons": [
             "",
             "",
@@ -79,16 +73,22 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{icon}",
+        "format-charging": "{icon}󱐋",
+        "format-plugged": "{icon}",
+        "tooltip-format": "{capacity}% | {timeTo}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
         ]
     },
     "network": {
@@ -98,13 +98,21 @@
         "format-linked": "!󰅛!",
         "format-disconnected": "󰲛"
     },
-    "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "Muted {icon} {format_source}",
-        "format-muted": "Muted {icon}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+    "bluetooth": {
+        "format": "",
+        "format-off": "󰂲",
+        "format-connected": "󰂱",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueberry"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}",
+        "format-bluetooth-muted": "",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -113,10 +121,9 @@
             "portable": "",
             "car": "",
             "default": [
-                "",
-                "",
-                "",
-                ""
+                //"",
+                //"",
+                ""
             ]
         },
         "on-click": "pavucontrol"
@@ -126,5 +133,16 @@
         "max-length": 40,
         "interval": 1, // Remove this if your script is endless and write in loop
         "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null" // Script in resources folder
-    }
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+          "default": "",
+          "performance": "",
+          "balanced": "",
+          "power-saver": ""
+        }
+      }
 }

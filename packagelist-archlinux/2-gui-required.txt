@@ -1,5 +1,6 @@
 adw-gtk3
 anyrun-git
+blueberry
 chili-sddm-theme
 cliphist
 file-roller

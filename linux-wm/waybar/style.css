@@ -10,11 +10,17 @@ window#waybar {
   background: rgba(0, 0, 0, 0);
 }
 
+/*-----module stuff----*/
+#bluetooth {
+  font-size: 19px;
+}
+
 /*-----module groups----*/
 .modules-right,
-.modules-center,
-.modules-left {
+/*.modules-left,*/
+.modules-center {
   background-color: rgba(0, 0, 0, 0.7);
+  padding: 0 14px;
 }
 
 .modules-right {
@@ -23,7 +29,6 @@ window#waybar {
 
 .modules-center {
   margin: 5px 0 0 0;
-  padding: 0 5px;
 }
 
 .modules-left {
@@ -31,8 +36,9 @@ window#waybar {
 }
 
 /*-----modules indv----*/
+/*#workspaces {}*/
 #workspaces button {
-  padding: 2px 14px;
+  padding: 2px 10px;
   background-color: transparent;
 }
 
@@ -45,18 +51,8 @@ window#waybar {
   background-color: rgba(128, 128, 128, 0.5);
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#custom-player,
-#idle_inhibitor {
-  padding: 0 10px;
+#workspaces button.urgent {
+  background-color: #F85D6D;
 }
 
 /*-----Indicators----*/
@@ -64,7 +60,7 @@ window#waybar {
   color: #2dcc36;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
   color: #cc3436;
 }
 
