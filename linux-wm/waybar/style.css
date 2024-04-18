@@ -3,36 +3,24 @@
   font-family: JetBrainsMono Nerd Font Propo;
   font-size: 16px;
   color: #ffffff;
-  border-radius: 20px;
+  border-radius: 0;
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /*-----module stuff----*/
 #bluetooth {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 /*-----module groups----*/
 .modules-right,
-/*.modules-left,*/
+.modules-left,
 .modules-center {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 0 14px;
-}
-
-.modules-right {
-  margin: 5px 10px 0 0;
-}
-
-.modules-center {
-  margin: 5px 0 0 0;
-}
-
-.modules-left {
-  margin: 5px 0 0 10px;
+  /*background-color: rgba(0, 0, 0, 0.7);*/
+  padding: 0 10px;
 }
 
 /*-----modules indv----*/

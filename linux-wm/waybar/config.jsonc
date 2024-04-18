@@ -1,21 +1,23 @@
 {
     "layer": "top",
     "spacing": 16,
-    "modules-left": [],
-    "modules-center": [
+    "modules-left": [
         "clock",
-        "hyprland/workspaces",
         "wireplumber",
         "temperature"
+        //"custom/player"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
-        "backlight",
-        "battery",
-        "power-profiles-daemon",
         "idle_inhibitor",
         "bluetooth",
-        "network"
+        "network",
+        "backlight",
+        "power-profiles-daemon",
+        "battery"
     ],
     "hyprland/workspaces": {
         "disable-scroll": false,
