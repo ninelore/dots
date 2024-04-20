@@ -1,4 +1,6 @@
-<h1 align="center">ninelore's new dotfile repo</h1>
+<h1 align="center">ninelore's non-nix dotfile repo</h1>
+
+## WARNING: Unmaintained because i switched to NixOS!
 
 ## Folders and files in repo root
 
